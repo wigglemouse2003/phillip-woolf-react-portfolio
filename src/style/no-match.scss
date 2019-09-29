@@ -1,0 +1,19 @@
+.no-match-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(50vh - 84px);
+    padding: 100px;
+
+    .icon {
+        font-size: 2.5em;
+        color: $warning;
+    }
+
+    .link-to-homepage {
+        color: $teal;
+        font-size: 1.25em;
+        text-decoration: none;
+    }
+}

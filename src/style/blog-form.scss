@@ -1,0 +1,45 @@
+.blog-form-wrapper {
+    @include base-grid();
+    grid-template-columns: 1fr;
+    padding: 26px;
+
+    @include input-element();
+
+    input {
+        margin-bottom: 0px;
+        font-size: 19.2px;
+    }
+
+    .image-uploaders {
+        @include base-grid();
+        grid-template-columns: 200px;
+        grid-template-rows: 160px;
+
+        .dz-message {
+            font-size: 15.04px;
+            margin-top: -17px;
+            margin-left: -10px;
+        }
+    }
+
+    .form-manager-image-wrapper {
+        img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
+
+    .image-removal-link {
+        display: flex;
+        justify-content: center;
+
+        a {
+            font-weight: 900;
+            font-size: 1.5em;
+            color: $warning;
+            cursor: pointer;
+        }
+    }
+}

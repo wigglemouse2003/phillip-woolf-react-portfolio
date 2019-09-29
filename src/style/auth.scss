@@ -1,0 +1,61 @@
+.auth-page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 84px);
+
+  .left-column {
+    background-size: cover;
+  }
+
+  .right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $offwhite;
+
+    .auth-login-wrapper {
+      .auth-form-wrapper {
+        @include input-element();
+        @include base-grid();
+        grid-gap: 21px;
+        padding: 21px;
+
+        .form-group {
+          display: flex;
+
+          svg {
+            font-size: 2em;
+            color: $orange;
+            margin-right: 15px;
+          }
+        }
+
+        input {
+          width: 100%;
+          background-color: $offwhite;
+          font-family: 'Titillium Web', sans-serif;
+        }
+
+        h1 {
+          display: flex;
+          text-align: center;
+        }
+
+        .error-text {
+          color: $warning;
+          font-size: 1.05em;
+          display: flex;
+          justify-content: center;
+        }
+
+
+        .login-btn-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}

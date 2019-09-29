@@ -1,0 +1,22 @@
+.btn {
+  @include base-btn();
+  font-size: 1.1em;
+}
+
+.login-btn {
+  @include base-btn();
+  font-size: 1em;
+  border-radius: 10px;
+  width: 75px;
+}
+
+.submit-btn {
+  @include base-btn();
+  font-size: 1em;
+  border-radius: 10px;
+  width: 75px;
+}
+
+.save-btn {
+  @include base-btn();
+}
