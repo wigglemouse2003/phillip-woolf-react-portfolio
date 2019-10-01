@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Personal portfolio app built in React",
   "scripts": {
+    "postinstall": "cp env.example.js env.js",
     "preinstall": "npm set audit false",
     "start": "webpack-dev-server --config webpack/dev.config.js --watch",
     "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --color",
@@ -33,6 +34,7 @@
   "homepage": "https://github.com/bottega-code-school/js-builder",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.20",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.5",
     "ajv": "^5.5.2",
     "autoprefixer": "^9.1.0",
@@ -45,6 +47,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "braces": ">=2.3.1",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.5.2",
     "core-js": "^3.2.1",
@@ -91,7 +94,8 @@
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "uglifyjs-webpack-plugin": "^1.2.7"
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.4"
   },
   "engines": {
     "node": "12.6.0",
