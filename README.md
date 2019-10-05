@@ -1,7 +1,9 @@
 # Phillip Woolf React Portfolio Application
 
-> git add .
+## To update, copy and paste this into the terminal:
 
-> git commit -m "initial commit"
+#### git add .
 
-> git push -u origin master
+#### git commit -m "initial commit"
+
+#### git push -u origin master
