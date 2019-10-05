@@ -3,6 +3,5 @@
     "env",
     "react"
   ],
-  "plugins": [
-  ]
+  "plugins": []
 }
