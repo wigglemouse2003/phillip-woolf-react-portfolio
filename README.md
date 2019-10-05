@@ -1,7 +1,7 @@
 # Phillip Woolf React Portfolio Application
 
-#### git add .
+> git add .
 
-#### git commit -m "initial commit"
+> git commit -m "initial commit"
 
-#### git push -u origin master
+> git push -u origin master
