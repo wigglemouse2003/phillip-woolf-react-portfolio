@@ -1,11 +1,11 @@
 import React from "react";
 
-import HomepageContainer from "../home/homepage-container";
+import PortfolioContainer from "../portfolio/portfolio-container";
 
 export default function() {
   return (
     <div>
-      <HomepageContainer />
+      <PortfolioContainer />
     </div>
   );
 }

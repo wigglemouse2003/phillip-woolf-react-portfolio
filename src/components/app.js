@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import NavigationContainer from "./navigation/navigation-container";
 import Home from "./pages/home";
+import Portfolio from "./pages/portfolio-page";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Blog from "./pages/blog";
@@ -112,6 +113,7 @@ export default class App extends Component {
 
               <Route path="/about-me" component={About} />
               <Route path="/contact" component={Contact} />
+              <Route path="/portfolio" component={Portfolio} />
 
               <Route
                 path="/blog"
@@ -133,6 +135,7 @@ export default class App extends Component {
               {this.state.loggedInStatus === "LOGGED_IN"
                 ? this.authorizedPages()
                 : null}
+
               <Route
                 exact
                 path="/portfolio/:slug"
