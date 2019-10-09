@@ -4,6 +4,9 @@
 
   .portfolio-item-wrapper {
     position: relative;
+    display: flex;
+    justify-content: center;
+
 
     .portfolio-img-background {
       background-size: cover;
@@ -11,6 +14,10 @@
       background-repeat: no-repeat;
       height: 350px;
       width: 100%;
+
+      @media (max-width: 615px) {
+        height: 150px;
+      }
     }
 
     .img-text-wrapper {
@@ -36,9 +43,15 @@
       font-weight: 400;
     }
 
-    .logo-wrapper img {
-      width: 50%;
-      margin-bottom: 20px;
+    .logo-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 50%;
+        margin-bottom: 20px;
+      }
     }
   }
 }
