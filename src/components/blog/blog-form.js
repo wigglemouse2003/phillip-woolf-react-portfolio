@@ -3,6 +3,9 @@ import axios from "axios";
 import DropzoneComponent from "react-dropzone-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import filepickerCss from "../../../node_modules/react-dropzone-component/styles/filepicker.css";
+import dropzoneCss from "../../../node_modules/dropzone/dist/min/dropzone.min.css";
+
 import RichTextEditor from "../forms/rich-text-editor";
 import DeleteImage from "../forms/delete-form-image";
 
