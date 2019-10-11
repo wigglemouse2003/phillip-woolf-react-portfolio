@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import homepageBackgroundPicture from "../../../static/assets/images/home/code-background.jpg";
 
 export default class HomepageContainer extends Component {
+  constructor() {
+  super();
+  }
   render() {
     return (
       <div
