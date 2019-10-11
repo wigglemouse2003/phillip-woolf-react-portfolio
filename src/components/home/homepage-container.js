@@ -5,6 +5,7 @@ export default class HomepageContainer extends Component {
   constructor() {
   super();
   }
+  
   render() {
     return (
       <div
