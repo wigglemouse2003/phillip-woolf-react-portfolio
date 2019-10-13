@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { EditorState, convertToRaw, ContentState } from "draft-js";
+import { EditorState, ConvertToRaw, ContentState } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import draftToHtml from "draftjs-to-html";
 import htmlToDraft from "html-to-draftjs";
@@ -34,7 +34,7 @@ export default class RichTextEditor extends Component {
     this.setState(
       { editorState },
       this.props.handleRichTextEditorChange(
-        draftToHtml(convertToRaw(this.state.editorState.getCurrentContent()))
+        draftToHtml(ConvertToRaw(this.state.editorState.getCurrentContent()))
       )
     );
   }

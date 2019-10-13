@@ -3,6 +3,9 @@ import axios from "axios";
 import DropzoneComponent from "react-dropzone-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import "../../../node_modules/react-dropzone-component/styles/filepicker.css";
+import "../../../node_modules/dropzone/dist/min/dropzone.min.css";
+
 import RichTextEditor from "../forms/rich-text-editor";
 
 export default class BlogForm extends Component {
