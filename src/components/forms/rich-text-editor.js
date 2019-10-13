@@ -28,6 +28,7 @@ export default class RichTextEditor extends Component {
       const editorState = EditorState.createWithContent(contentState);
       this.setState({ editorState });
     }
+    console.log(this.state.editorState);
   }
 
   onEditorStateChange(editorState) {
@@ -37,6 +38,7 @@ export default class RichTextEditor extends Component {
         draftToHtml(convertToRaw(this.state.editorState.getCurrentContent()))
       )
     );
+    console.log(this.state.editorState);
   }
 
   getBase64(file, callback) {
@@ -55,7 +57,25 @@ export default class RichTextEditor extends Component {
   render() {
     return (
       <div>
-        <Editor />
+        <Editor
+          editorState={this.state.editorState}
+          wrapperClassName="demo-wrapper"
+          editorClassname="demo-editor"
+          onEditorStateChange={this.onEditorStateChange}
+          toolbar={{
+            inline: { inDropdown: true },
+            list: { inDropdown: true },
+            textAlign: { inDropdown: true },
+            link: { inDropdown: true },
+            history: { inDropdown: true },
+            image: {
+              uploadCallback: this.uploadFile,
+              alt: { present: true, mandatory: false },
+              previewImage: true,
+              inputAccept: "image/gif,image/jpeg,image/jpg,image/png,image/svg"
+            }
+          }}
+        />
       </div>
     );
   }
