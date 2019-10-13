@@ -147,7 +147,7 @@ export default class BlogForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="blog-form-wrapper"
+      <form onSubmit={this.handleSubmit} className="blog-form-wrapper">
         <div className="two-column">
           <input
             type="text"
@@ -166,17 +166,7 @@ export default class BlogForm extends Component {
           />
         </div>
 
-        <div className="one-column">
-          <RichTextEditor
-            handleRichTextEditorChange={this.handleRichTextEditorChange}
-            editMode={this.props.editMode}
-            contentToEdit={
-              this.props.editMode && this.props.blog.content
-                ? this.props.blog.content
-                : null
-            }
-          />
-        </div>
+        <div className="one-column"></div>
 
         <div className="image-uploaders">
           {this.props.editMode && this.props.blog.featured_image_url ? (
