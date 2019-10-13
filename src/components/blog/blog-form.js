@@ -169,7 +169,7 @@ export default class BlogForm extends Component {
         <div className="one-column">
           <RichTextEditor
             handleRichTextEditorChange={this.handleRichTextEditorChange}
-            editMode={this.props.editMode || null}
+            editMode={this.props.editMode}
             contentToEdit={
               this.props.editMode && this.props.blog.content
                 ? this.props.blog.content
@@ -191,9 +191,10 @@ export default class BlogForm extends Component {
             </div>
           ) : (
             <DropzoneComponent
+              ref={this.featuredImageRef}
               config={this.componentConfig()}
               djsConfig={this.djsConfig()}
-              eventHandlers={this.handleThumbDrop()}
+              eventHandlers={this.handleFeaturedImageDrop()}
             >
               <div className="dz-message">Featured Image</div>
             </DropzoneComponent>

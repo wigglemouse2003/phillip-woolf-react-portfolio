@@ -147,7 +147,6 @@ export default class RichTextEditor extends Component {
             link: { inDropdown: true },
             history: { inDropdown: true },
             image: {
-              uploadCallback: this.uploadFile,
               alt: { present: true, mandatory: false },
               previewImage: true,
               inputAccept: "image/gif,image/jpeg,image/jpg,image/png,image/svg"
