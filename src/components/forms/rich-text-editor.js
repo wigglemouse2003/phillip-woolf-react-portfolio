@@ -55,21 +55,7 @@ export default class RichTextEditor extends Component {
   render() {
     return (
       <div>
-        <Editor
-          toolbar={{
-            inline: { inDropdown: true },
-            list: { inDropdown: true },
-            textAlign: { inDropdown: true },
-            link: { inDropdown: true },
-            history: { inDropdown: true },
-            image: {
-              uploadCallback: this.uploadFile,
-              alt: { present: true, mandatory: false },
-              previewImage: true,
-              inputAccept: "image/gif,image/jpeg,image/jpg,image/png,image/svg"
-            }
-          }}
-        />
+        <Editor />
       </div>
     );
   }
