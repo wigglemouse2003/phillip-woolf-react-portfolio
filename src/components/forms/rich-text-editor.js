@@ -28,7 +28,6 @@ export default class RichTextEditor extends Component {
       const editorState = EditorState.createWithContent(contentState);
       this.setState({ editorState });
     }
-    console.log(this.state.editorState);
   }
 
   onEditorStateChange(editorState) {
@@ -38,7 +37,6 @@ export default class RichTextEditor extends Component {
         draftToHtml(convertToRaw(this.state.editorState.getCurrentContent()))
       )
     );
-    console.log(this.state.editorState);
   }
 
   getBase64(file, callback) {
