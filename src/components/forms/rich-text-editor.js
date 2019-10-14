@@ -55,24 +55,7 @@ export default class RichTextEditor extends Component {
   render() {
     return (
       <div>
-        <Editor
-          editorState={this.state.editorState}
-          wrapperClassName="demo-wrapper"
-          editorClassname="demo-editor"
-          onEditorStateChange={this.onEditorStateChange}
-          toolbar={{
-            inline: { inDropdown: true },
-            list: { inDropdown: true },
-            textAlign: { inDropdown: true },
-            link: { inDropdown: true },
-            history: { inDropdown: true },
-            image: {
-              alt: { present: true, mandatory: false },
-              previewImage: true,
-              inputAccept: "image/gif,image/jpeg,image/jpg,image/png,image/svg"
-            }
-          }}
-        />
+        <Editor />
       </div>
     );
   }
