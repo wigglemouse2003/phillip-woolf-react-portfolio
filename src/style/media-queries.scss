@@ -1,4 +1,4 @@
-@media (max-width: 615px) {
+@media (max-width: 615px) and (orientation: portrait) {
     .nav-wrapper {
         display: flex;
         justify-content: center;
@@ -32,6 +32,8 @@
         .homepage {
             .home-block {
                 height: 150px;
+                padding: 10px;
+                width: calc(100vw - 20px);
 
                 h1 {
                     font-size: 3em;
@@ -40,6 +42,7 @@
 
             .welcome-text {
                 height: 70px;
+                padding: 40px;
 
                 p {
                     margin-top: -50px;
@@ -69,5 +72,31 @@
                 margin-bottom: 20px;
             }
         }
+    }
+}
+
+@media (max-width: 615px) and (orientation: landscape) {
+    .nav-wrapper {
+        .left-side {
+            .nav-link-wrapper {
+                font-size: .75em;
+                margin-right: 10px;
+            }
+        }
+
+        .right-side {
+
+            p,
+            a {
+                font-size: 0.85em;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 615px) and (orientation: landscape) {
+    .homepage-wrapper {
+        height: calc(228px + 170px);
     }
 }

@@ -7,12 +7,20 @@
 
   .left-side {
     display: flex;
+    align-items: center;
   }
 
   .right-side {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     color: $grey;
+
+    p {
+      display: flex;
+      justify-content: flex-end;
+      width: 131.188px;
+    }
 
     a {
       margin-left: 15px;
