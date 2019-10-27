@@ -73,4 +73,17 @@
             }
         }
     }
+
+    .blog-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 200px;
+
+        h1 {
+            font-size: 2em;
+            color: $dark-orange;
+        }
+    }
 }

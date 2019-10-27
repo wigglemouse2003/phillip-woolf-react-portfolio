@@ -1,69 +1,83 @@
-.nav-wrapper {
+.nav-wrapper-background {
   display: flex;
-  justify-content: space-between;
-  padding: 30px;
+  justify-content: center;
   background-color: #20214e;
   box-shadow: inset -0px -80px 50px -60px rgba(0, 0, 25, 0.75);
 
-  .left-side {
-    display: flex;
-  }
-
-  .right-side {
+  .nav-wrapper {
+    width: 95vw;
     display: flex;
     justify-content: space-between;
-    color: $grey;
+    padding: 20px;
 
-    a {
-      margin-left: 15px;
-      cursor: pointer;
-      color: $orange;
-      transition: 0.5s ease-in-out;
+    .left-side {
+      display: flex;
+      align-items: center;
+    }
 
-      &:hover {
-        color: $dark-orange;
+    .right-side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $grey;
+
+      p {
+        display: flex;
+        justify-content: flex-end;
+        width: 131.188px;
+      }
+
+      a {
+        margin-left: 15px;
+        cursor: pointer;
+        color: $orange;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+          color: $dark-orange;
+        }
       }
     }
-  }
 
-  .nav-link-wrapper {
-    height: 22px;
-    border-bottom: 1px solid transparent;
-    transition: 0.5s ease-in-out;
-    margin-right: 20px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-
-    a {
-      color: $grey;
-      text-decoration: none;
+    .nav-link-wrapper {
+      height: 22px;
       border-bottom: 1px solid transparent;
       transition: 0.5s ease-in-out;
+      margin-right: 20px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
 
-      &:hover {
+      a {
+        color: $grey;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+          border-bottom: 1px solid white;
+          color: white;
+        }
+      }
+
+      .nav-link-active {
         border-bottom: 1px solid white;
         color: white;
       }
     }
 
-    .nav-link-active {
-      border-bottom: 1px solid white;
-      color: white;
-    }
-  }
+    .login-wrapper {
 
-  .login-wrapper {
+      a {
+        color: $grey;
+        border: 2px solid $grey;
+        border-radius: 5px;
+        padding: 5px;
+        margin-right: -20px;
 
-    a {
-      color: $grey;
-      border: 2px solid $grey;
-      border-radius: 5px;
-      padding: 5px;
-      margin-right: -20px;
-
-      &:hover {
-        color: white;
-        border: 2px solid white;
+        &:hover {
+          color: white;
+          border: 2px solid white;
+        }
       }
     }
   }

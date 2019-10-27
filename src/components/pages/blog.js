@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import BlogItem from "../blog/blog-item";
 import BlogModal from "../modals/blog-modal";
+import blogBanner from "../../../static/assets/images/blog/my-code-background.jpg";
 
 class Blog extends Component {
   constructor() {
@@ -92,7 +93,8 @@ class Blog extends Component {
       .get(
         `https://phillipwoolf.devcamp.space/portfolio/portfolio_blogs?page=${this.state.currentPage}`,
         {
-          withCredentials: true
+          withCredentials: true,
+          SameSite: "None"
         }
       )
       .then(response => {
@@ -137,6 +139,16 @@ class Blog extends Component {
 
     return (
       <div className="blog-container">
+        <div
+          className="blog-banner"
+          style={{
+            background: "url(" + blogBanner + ") no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
+        >
+          <h1>Welcome To My Blog</h1>
+        </div>
         <BlogModal
           handleSuccessfulNewBlogSubmission={
             this.handleSuccessfulNewBlogSubmission

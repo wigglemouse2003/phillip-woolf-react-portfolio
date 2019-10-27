@@ -3,8 +3,10 @@ import axios from "axios";
 import DropzoneComponent from "react-dropzone-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import "../../../node_modules/react-dropzone-component/styles/filepicker.css";
+import "../../../node_modules/dropzone/dist/min/dropzone.min.css";
+
 import RichTextEditor from "../forms/rich-text-editor";
-import DeleteImage from "../forms/delete-form-image";
 
 export default class BlogForm extends Component {
   constructor(props) {
@@ -122,7 +124,7 @@ export default class BlogForm extends Component {
         });
 
         if (this.props.editMode) {
-          // Update blog deatail
+          // Update blog detail
           this.props.handleUpdateFormSubmission(response.data.portfolio_blog);
         } else {
           this.props.handleSuccessfullFormSubmission(

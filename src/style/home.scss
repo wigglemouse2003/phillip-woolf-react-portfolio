@@ -1,5 +1,5 @@
 .homepage-wrapper {
-    height: calc(100vh - 84px);
+    height: 800px;
     width: 100vw;
 
     .homepage {
@@ -10,7 +10,7 @@
 
         .home-block {
             width: 100vw;
-            height: 300px;
+            height: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,7 +28,7 @@
             text-align: center;
             color: black;
             background-color: rgba(0, 110, 255, 0.863);
-            padding: 40px;
+            padding: 20px;
             border-radius: 0px 0px 50px 50px;
         }
     }
