@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-bottom: 100px;
 
     .admin-blog-wrapper {
         display: flex;
@@ -86,4 +87,9 @@
             color: $dark-orange;
         }
     }
+
+}
+
+.spacer {
+    margin-bottom: 100px;
 }

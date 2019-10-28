@@ -11,9 +11,17 @@ const BlogItem = props => {
     title,
     featured_image_url
   } = props.blogItem;
-
+  const blogs = props.items;
+  const Class = item => {
+    if (blogs[blogs.length - 1] === props.blogItem) {
+      return "spacer";
+    } else {
+      return null;
+    }
+  };
   return (
     <div>
+      {/* className={"class " + { Class }} */}
       <Link to={`/b/${id}`}>
         <h1>{title}</h1>
       </Link>
