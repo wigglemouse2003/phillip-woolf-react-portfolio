@@ -58,7 +58,7 @@ export default class PortfolioDetail extends Component {
           <img src={logo_url} style={logoStyles} />
         </div>
 
-        <div className="portfolio-detail-discription-wrapper">
+        <div className="portfolio-detail-description-wrapper">
           <div className="description">{description}</div>
         </div>
 
