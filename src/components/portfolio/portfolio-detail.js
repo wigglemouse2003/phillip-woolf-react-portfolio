@@ -26,7 +26,7 @@ export default class PortfolioDetail extends Component {
         });
       })
       .catch(error => {
-        console.log("getpotfolioitem error", error);
+        console.log("getportfolioitem error", error);
       });
   }
 
