@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal portfolio app built in React",
   "scripts": {
-    "postinstall": "cp env.example.js env.js",
+    "preinstall": "npm set audit false",
     "start": "webpack-dev-server --config webpack/dev.config.js --watch",
     "start-prod": "webpack-prod-server --config webpack/prod.config.js --watch",
     "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --color",
@@ -99,6 +99,6 @@
     "webpack": "^4.41.2"
   },
   "engines": {
-    "node": "10.15.3"
+    "node": "^16.4.0"
   }
 }
