@@ -22,7 +22,7 @@ module.exports = webpackMerge(webpackCommon, {
 
     chunkFilename: "[id]-chunk.js",
 
-    publicPath: "/"
+    publicPath: "/",
   },
 
   module: {
@@ -31,39 +31,37 @@ module.exports = webpackMerge(webpackCommon, {
         test: /\.s?css$/,
         use: [
           {
-            loader: "style-loader"
+            loader: "style-loader",
           },
           {
             loader: "css-loader",
             options: {
-              importLoaders: 2
-            }
+              importLoaders: 2,
+            },
           },
           {
             loader: "sass-loader",
             options: {
-              outputStyle: "expanded",
               sourceMap: true,
-              sourceMapContents: true
-            }
-          }
-        ]
-      }
-    ]
+            },
+          },
+        ],
+      },
+    ],
   },
 
   plugins: [
     new DefinePlugin({
       "process.env": {
-        NODE_ENV: "'development'"
-      }
+        NODE_ENV: "'development'",
+      },
     }),
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(__dirname, "../static/index.html"),
-      favicon: path.resolve(__dirname, "../static/favicon.ico")
+      favicon: path.resolve(__dirname, "../static/favicon.ico"),
     }),
-    new HotModuleReplacementPlugin()
+    new HotModuleReplacementPlugin(),
   ],
 
   devServer: {
@@ -74,15 +72,15 @@ module.exports = webpackMerge(webpackCommon, {
     compress: true,
     hot: true,
     historyApiFallback: {
-      disableDotRule: true
+      disableDotRule: true,
     },
     watchOptions: {
-      ignored: /node_modules/
+      ignored: /node_modules/,
     },
     overlay: {
       warnings: true,
-      errors: true
+      errors: true,
     },
-    proxy: proxyRules
-  }
+    proxy: proxyRules,
+  },
 });
