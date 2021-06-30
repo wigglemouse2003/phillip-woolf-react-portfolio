@@ -84,12 +84,9 @@ module.exports = webpackMerge(webpackCommon, {
         minifyURLs: true,
       },
     }),
-    new CopyWebpackPlugin(
-      { patterns: [{ from: path.resolve(__dirname, "../static") }] },
-      {
-        ignore: ["index.html", "favicon.ico"],
-      }
-    ),
+    new CopyWebpackPlugin([{ from: path.resolve(__dirname, "../static") }], {
+      ignore: ["index.html", "favicon.ico"],
+    }),
     new CleanWebpackPlugin(["dist"], {
       root: path.resolve(__dirname, ".."),
       exclude: ".gitignore",
