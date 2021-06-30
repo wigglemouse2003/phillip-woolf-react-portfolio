@@ -18,17 +18,16 @@ module.exports = webpackMerge(webpackCommon, {
   devtool: "source-map",
   mode: "production",
   output: {
-      fallback: {
-        path: path.resolve(__dirname, "../dist"),
+    fallback: {
+      path: path.resolve(__dirname, "../dist"),
 
-        filename: "[name]-[hash].min.js",
+      filename: "[name]-[hash].min.js",
 
-        sourceMapFilename: "[name]-[hash].map",
+      sourceMapFilename: "[name]-[hash].map",
 
-        chunkFilename: "[id]-[chunkhash].js",
+      chunkFilename: "[id]-[chunkhash].js",
 
-        publicPath: "/",
-      },
+      publicPath: "/",
     },
   },
 
