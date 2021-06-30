@@ -26,7 +26,7 @@ module.exports = webpackMerge(webpackCommon, {
 
     chunkFilename: "[id]-[chunkhash].js",
 
-    publicPath: "/"
+    publicPath: "/",
   },
 
   module: {
@@ -40,30 +40,30 @@ module.exports = webpackMerge(webpackCommon, {
               loader: "css-loader",
               options: {
                 sourceMap: true,
-                importLoaders: 2
-              }
+                importLoaders: 2,
+              },
             },
             {
               loader: "postcss-loader",
               options: {
                 config: {
-                  path: path.resolve(__dirname, "postcss.config.js")
+                  path: path.resolve(__dirname, "postcss.config.js"),
                 },
-                sourceMap: true
-              }
+                sourceMap: true,
+              },
             },
             {
               loader: "sass-loader",
               options: {
                 outputStyle: "expanded",
                 sourceMap: true,
-                sourceMapContents: true
-              }
-            }
-          ]
-        })
-      }
-    ]
+                sourceMapContents: true,
+              },
+            },
+          ],
+        }),
+      },
+    ],
   },
 
   plugins: [
@@ -81,20 +81,23 @@ module.exports = webpackMerge(webpackCommon, {
         keepClosingSlash: true,
         minifyJS: true,
         minifyCSS: true,
-        minifyURLs: true
+        minifyURLs: true,
+      },
+    }),
+    new CopyWebpackPlugin(
+      { patterns: [{ from: path.resolve(__dirname, "../static") }] },
+      {
+        ignore: ["index.html", "favicon.ico"],
       }
-    }),
-    new CopyWebpackPlugin([{ from: path.resolve(__dirname, "../static") }], {
-      ignore: ["index.html", "favicon.ico"]
-    }),
+    ),
     new CleanWebpackPlugin(["dist"], {
       root: path.resolve(__dirname, ".."),
-      exclude: ".gitignore"
+      exclude: ".gitignore",
     }),
     new DefinePlugin({
       "process.env": {
-        NODE_ENV: '"production"'
-      }
+        NODE_ENV: '"production"',
+      },
     }),
     new ExtractTextPlugin("[name]-[chunkhash].min.css"),
     new UglifyJsPlugin({
@@ -102,25 +105,25 @@ module.exports = webpackMerge(webpackCommon, {
         compress: {
           ecma: 7,
           ie8: true,
-          warnings: false
+          warnings: false,
         },
         mangle: {
-          ie8: true
+          ie8: true,
         },
         output: {
           comments: false,
-          ie8: true
-        }
+          ie8: true,
+        },
       },
-      sourceMap: true
+      sourceMap: true,
     }),
     new LoaderOptionsPlugin({
       options: {
         context: "/",
         sassLoader: {
-          includePaths: [path.resolve(__dirname, "../src")]
-        }
-      }
-    })
-  ]
+          includePaths: [path.resolve(__dirname, "../src")],
+        },
+      },
+    }),
+  ],
 });
