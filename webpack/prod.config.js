@@ -2,7 +2,7 @@ const path = require("path");
 const webpackMerge = require("webpack-merge");
 const autoprefixer = require("autoprefixer");
 const webpackCommon = require("./common.config");
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // webpack plugins
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const DefinePlugin = require("webpack/lib/DefinePlugin");
@@ -34,7 +34,7 @@ module.exports = webpackMerge(webpackCommon, {
       {
         test: /\.s?css$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
+          fallback: MiniCssExtractPlugin.loader,
           use: [
             {
               loader: "css-loader",

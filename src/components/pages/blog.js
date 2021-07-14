@@ -15,7 +15,7 @@ class Blog extends Component {
       totalCount: 0,
       currentPage: 0,
       isLoading: true,
-      blogModalIsOpen: false
+      blogModalIsOpen: false,
     };
 
     this.getBlogItems = this.getBlogItems.bind(this);
@@ -23,9 +23,8 @@ class Blog extends Component {
     window.addEventListener("scroll", this.onScroll, false);
     this.handleNewBlogClick = this.handleNewBlogClick.bind(this);
     this.handleModalClose = this.handleModalClose.bind(this);
-    this.handleSuccessfulNewBlogSubmission = this.handleSuccessfulNewBlogSubmission.bind(
-      this
-    );
+    this.handleSuccessfulNewBlogSubmission =
+      this.handleSuccessfulNewBlogSubmission.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
   }
 
@@ -35,16 +34,16 @@ class Blog extends Component {
         `https://api.devcamp.space/portfolio/portfolio_blogs/${blog.id}`,
         { withCredentials: true }
       )
-      .then(response => {
+      .then((response) => {
         this.setState({
-          blogItems: this.state.blogItems.filter(blogItem => {
+          blogItems: this.state.blogItems.filter((blogItem) => {
             return blog.id != blogItem.id;
-          })
+          }),
         });
 
         return response.data;
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("delete blog error", error);
       });
   }
@@ -52,19 +51,19 @@ class Blog extends Component {
   handleSuccessfulNewBlogSubmission(blog) {
     this.setState({
       blogModalIsOpen: false,
-      blogItems: [blog].concat(this.state.blogItems)
+      blogItems: [blog].concat(this.state.blogItems),
     });
   }
 
   handleModalClose() {
     this.setState({
-      blogModalIsOpen: false
+      blogModalIsOpen: false,
     });
   }
 
   handleNewBlogClick() {
     this.setState({
-      blogModalIsOpen: true
+      blogModalIsOpen: true,
     });
   }
 
@@ -86,7 +85,7 @@ class Blog extends Component {
 
   getBlogItems() {
     this.setState({
-      currentPage: this.state.currentPage + 1
+      currentPage: this.state.currentPage + 1,
     });
 
     axios
@@ -94,18 +93,18 @@ class Blog extends Component {
         `https://phillipwoolf.devcamp.space/portfolio/portfolio_blogs?page=${this.state.currentPage}`,
         {
           withCredentials: true,
-          SameSite: "None"
+          SameSite: "None",
         }
       )
-      .then(response => {
+      .then((response) => {
         console.log("getting", response.data);
         this.setState({
           blogItems: this.state.blogItems.concat(response.data.portfolio_blogs),
           totalCount: response.data.meta.total_records,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("getBlogItems error", error);
       });
   }
@@ -119,7 +118,7 @@ class Blog extends Component {
   }
 
   render() {
-    const blogRecords = this.state.blogItems.map(blogItem => {
+    const blogRecords = this.state.blogItems.map((blogItem) => {
       if (this.props.loggedInStatus === "LOGGED_IN") {
         return (
           <div key={blogItem.id} className="admin-blog-wrapper">
@@ -150,7 +149,7 @@ class Blog extends Component {
           style={{
             background: "url(" + blogBanner + ") no-repeat",
             backgroundSize: "cover",
-            backgroundPosition: "center"
+            backgroundPosition: "center",
           }}
         >
           <h1>Welcome To My Blog</h1>

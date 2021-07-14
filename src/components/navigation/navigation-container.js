@@ -1,10 +1,10 @@
 import React from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-const NavigationComponent = props => {
+const NavigationComponent = (props) => {
   const dynamicLink = (route, linkText) => {
     return (
       <div className="nav-link-wrapper">
@@ -18,14 +18,14 @@ const NavigationComponent = props => {
   const handleSignOut = () => {
     axios
       .delete("https://api.devcamp.space/logout", { withCredentials: true })
-      .then(response => {
+      .then((response) => {
         if (response.status === 200) {
           props.history.push("/");
           props.handleSuccessfulLogout();
         }
         return response.data;
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("Error signing out", error);
       });
   };
