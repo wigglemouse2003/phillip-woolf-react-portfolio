@@ -99,7 +99,7 @@ module.exports = webpackMerge(webpackCommon, {
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
-          ecma: 7,
+          // ecma: 7,
           ie8: true,
           warnings: false,
         },
