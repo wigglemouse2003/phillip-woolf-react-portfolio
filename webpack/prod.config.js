@@ -97,7 +97,7 @@ module.exports = webpackMerge(webpackCommon, {
         NODE_ENV: '"production"',
       },
     }),
-    new ExtractTextPlugin("[name]-[chunkhash].min.css"),
+    new MiniCssExtractPlugin(),
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
