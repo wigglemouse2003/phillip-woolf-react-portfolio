@@ -22,7 +22,7 @@ module.exports = webpackMerge(webpackCommon, {
 
     filename: "[name]-[hash].min.js",
 
-    sourceMapFilename: "[name]-[hash].map",
+    // sourceMapFilename: "[name]-[hash].map",
 
     chunkFilename: "[id]-[chunkhash].js",
 
