@@ -101,7 +101,7 @@ module.exports = webpackMerge(webpackCommon, {
         compress: {
           // ecma: 7,
           ie8: true,
-          warnings: false,
+          // warnings: false,
         },
         mangle: {
           ie8: true,
