@@ -40,7 +40,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@react-native-community/cli": "^5.0.1",
     "acorn": "^6.4.2",
-    "ajv": "^6.9.1",
+    "ajv": "^6.12.3",
     "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
     "babel": "^6.23.0",
