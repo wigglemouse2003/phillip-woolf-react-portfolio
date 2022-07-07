@@ -76,7 +76,7 @@
     "htmlparser2": "^6.1.0",
     "immutable": "^3.8.2",
     "jscodeshift": "^0.13.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "node-sass": "^6.0.1",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.1",
